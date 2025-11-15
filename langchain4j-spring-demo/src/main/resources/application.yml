@@ -1,0 +1,22 @@
+# application.yml
+spring:
+  profiles:
+    active: local #激活local文件配置
+
+langchain4j:
+  open-ai:
+    chat-model:
+      model-name: qwen-plus
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      # api-key 留空，由 local profile 覆盖
+
+    streaming-chat-model:
+      model-name: qwen-plus
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      # api-key 留空，由 local profile 覆盖
+      log-requests: true
+      log-responses: true
+
+logging:
+  level:
+    dev.langchain4j: debug
